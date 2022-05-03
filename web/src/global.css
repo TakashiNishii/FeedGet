@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    /* Quando colocamos a cor entre [] significa que estamos colocando uma cor personalizada */
+    @apply bg-[#09090A] text-zinc-100;
+}

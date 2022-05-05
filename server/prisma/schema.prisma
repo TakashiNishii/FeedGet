@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Generate the schema
+model Feedback {
+  id String @id @default(uuid()) // Gera um UUID automaticamente para cada feedback
+
+  type       String
+  comment    String
+  screenshot String? // Optional
+
+  @@map("feedbacks")
+}
+
+//Para executar devo rodar o comando: npx prisma deploy
+//Para executar em ambiente de desenvolvimento: npx prisma migrate dev
+
+//Para visualizar o banco de dados: npx prisma studio

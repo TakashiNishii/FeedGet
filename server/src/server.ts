@@ -12,6 +12,6 @@ app.use(routes) //use as rotas que estão no routes.ts
 
 
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3333, () => {
     console.log("HTTP server running!");
 }); //listen é uma função do express que faz o servidor ouvir a porta 3333
